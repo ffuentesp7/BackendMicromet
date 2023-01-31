@@ -8,4 +8,5 @@ const app = express();
 app.use(cors());
 app.use(router);
 dbInstance.db.get('adcon');
+var adconDB = dbInstance.db.use('adcon');
 app.listen(PORT, () => console.log(`Escuchando por el puerto ${PORT}`));
